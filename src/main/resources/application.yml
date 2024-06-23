@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: unit-test-demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.113:3306/unit_test_demo?useSSL=false&rewriteBatchedStatements=true&connectTimeout=5000&socketTimeout=60000&autoReconnect=true&sessionVariables=FOREIGN_KEY_CHECKS=0&useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: 123456
+
+mybatis:
+  mapperLocations: classpath*:mapper/**/**/*Mapper.xml
+  type-aliases-package: com.wongtp.unit.test.app.**.mapper
+  configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
